@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instagram Pictures</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+   <h1 id="IgPosts" class="black-text">Photos</h1> 
+   <img src="images/instagram.jpg" id="igposts" />
+    <div class="container">
+        <div class="column">
+            <% data.statuses.forEach(function(posts) { %>
+                    <div class="col card white small">
+
+                        <div class="card-content black-text">
+                            <img src="<%= posts.user.profile_image_url%>" id="pimg" />
+                            <p id="name">
+                                <%= posts.user.name %>
+                            </p>
+                            <p id="username">@
+                                <%=posts.user.screen_name %>
+                            </p>
+                            <p id="posts">posts:
+                                <%= posts.text %>
+                            </p>
+                            <%  if (posts.entities && posts.entities.urls && posts.entities.urls.hasOwnProperty['0']) { %>
+                                <% console.log('entity', posts.entities.urls['0']) %>
+                                <img src="<%= posts.entities.urls['0'].url %>" />
+                            <% }  %>
+                            
+                            <p id="location"><small>Location:
+                                <%= posts.user.location %>
+                            </small></p>
+                            <p id="Time"><small>Time:
+                                <%= posts.created_at %>
+                            </small></p>
+                            
+                            <p id="Repostss"><small>Repostss:
+                                <%= posts.reposts_count %>
+                            </small></p>
+                            <p id="Favorites"><small>Favorites:
+                                <%= posts.favorite_count %>
+                            </small></p>
+                        </div>
+                    </div>
+                    
+            <% }) %>
+        </div>
+        </div>
+</body>
+
+</html>
+

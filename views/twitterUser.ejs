@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter User Tweets</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+   <h1 id="Twittle" class="black-text">Tweets</h1> 
+   <img src="images/twitter.png" id="twiit" />
+    <div class="container">
+        <div class="column">
+            <% data.statuses.forEach(function(tweet) { %>
+                    <div class="col card white small">
+
+                        <div class="card-content black-text">
+                            <img src="<%= tweet.user.profile_image_url%>" id="pimg" />
+                            <p id="name">
+                                <%= tweet.user.name %>
+                            </p>
+                            <p id="username">@
+                                <%=tweet.user.screen_name %>
+                            </p>
+                            <p id="Tweet">Tweet:
+                                <%= tweet.text %>
+                            </p>
+                            <%  if (tweet.entities && tweet.entities.urls && tweet.entities.urls.hasOwnProperty['0']) { %>
+                                <% console.log('entity', tweet.entities.urls['0']) %>
+                                <img src="<%= tweet.entities.urls['0'].url %>" />
+                            <% }  %>
+                            
+                            <p id="location"><small>Location:
+                                <%= tweet.user.location %>
+                            </small></p>
+                            <p id="Time"><small>Time:
+                                <%= tweet.created_at %>
+                            </small></p>
+                            
+                            <p id="Retweets"><small>Retweets:
+                                <%= tweet.retweet_count %>
+                            </small></p>
+                            <p id="Favorites"><small>Favorites:
+                                <%= tweet.favorite_count %>
+                            </small></p>
+                        </div>
+                    </div>
+                    
+            <% }) %>
+        </div>
+        </div>
+</body>
+
+</html>

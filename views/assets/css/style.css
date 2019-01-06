@@ -1,0 +1,62 @@
+ #name{
+    position: relative;
+    margin:auto;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  
+  #twiit{
+    position: relative;
+    height: 10%;
+    width: 10%;
+    bottom: 115px;
+    left: 30%;
+  }
+  #pimg {
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px;
+  }
+
+  #timg {
+      border-radius: 100%;
+      box-shadow: 1px 1px 1px;
+    }
+
+
+  body {
+      
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: radial-gradient(darkblue, lightblue);
+    background: -webkit-radial-gradient( darkblue, lightblue);
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .card{
+    background: radial-gradient(white, white);
+    background: -webkit-radial-gradient( white, white );
+  }
+  
+  #username{
+    color: gray;
+  }
+  
+  #footer {
+    padding: 80px;
+  }
+  
+  #main{
+      padding-bottom: 50px;
+      padding-top: 50px;
+  }
+  
+  #sideBack{
+  position: relative;
+  right: 10px;
+  }

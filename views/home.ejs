@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <title>Materialize Page</title>
+          <!-- Compiled and minified CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="assets/css/style.css" />
+          <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+          
+          <meta charset="utf-8" />
+      		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+      		<link rel="stylesheet" href="assets/css/main.css" />
+      		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+      		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    
+    
+    <body>
+      <!-- Wrapper -->
+			<div id="wrapper">
+      
+      <!--Header-->
+      <header>
+        <nav class="light-blue darken-2">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Blue Note</a>
+          </div>
+        </nav>
+      </header>
+      
+      <!--Side Nav -->
+      <ul id="slide-out" class="side-nav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="images/sunset.jpeg" style="width:300px;height:250px" id="sideBack">
+            </div>
+            <a href="#!user"><img src="images/profile circle.png" style="width:200px;height:200px"></a>
+            <a href="#!name"><span class="blue-text name">*name*</span></a>
+            <a href="#!email"><span class="blue-text email">*email*</span></a>
+            </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>NewsFeed</a></li>
+            <li><a href="#!"><i class="material-icons">queue_music</i>Music</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Favorites</a></li>
+            <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
+        </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+     
+      <!-- Main -->
+					<div id="main">
+						<article class="thumb">
+							<a href="images/twitter.jpg" class="image"><img src="images/twitter.jpg" alt="" /></a>
+							<form action="/search-twitter-user" method="post">
+							  <p>Search trending Twitter tags here: <input type="text" id="searchUser" name="twitterUser" /></p>
+              	<button class="btn" type="submit" >Find Tweets</button>
+              </form>
+						</article>
+						
+						<article class="thumb">
+							<a href="images/instagram.jpg" class="image"><img src="images/instagram.jpg" alt="" /></a>
+							<p>Search trending Instagram tags here: <input type="text" id="searchUser" name="instagramPost" /></p>
+              					<button class="btn" type="submit">Find Posts</button>
+						</article>
+
+						<article class="thumb">
+							<a href="images/facebook.png" class="image"><img src="images/facebook.png" alt="" /></a>
+							<p>Lookup Any Facebook Page here: <input type="text" id="facebook" name="facebookPage" /></p>
+              					<button class="btn" type="submit">Find Page</button>
+						</article>
+						
+				  </div>
+    						
+    		<footer class="light-blue darken-2" id="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="grey-text text-lighten-4">My name is Josiah. My program is made for ease of access to social media for companies. With all the main social media sites in one area, companies can save on a lot of time by using my website. Around 88% of companies use soical media in their advertisements. So this would be a very helpful app all around the world! :)</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">https://www.facebook.com/</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/">https://twitter.com/</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.spotify.com/us/">https://www.spotify.com/us/</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright of Josiah Paintsil
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+      </footer>			
+    		
+    		
+      <!--Script type choice-->
+      <script type="text/javascript">
+           // Initialize collapse button
+      $(".button-collapse").sideNav()
+      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+      </script>      
+      <script src="assets/js/script.js"></script>
+      
+      <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lteIE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			
+			
+    </body>    
+</html>
+        
+
